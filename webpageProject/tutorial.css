@@ -98,5 +98,22 @@ span {
 }
 }
 
-/* And now I can apply that with <canvas id="canvasNumberOne">
+/* And now I can apply that with <canvas id="canvasNumberOne">.
+
+  Hmm, I like the larger text size, but double 
+  on the spans is a bit much, don't you think?
+  Let's fiddle. Let's make the default 
+  size 14-point font, and the 
+  span 18-point with bold face. But instead of
+  using span, let's give it a class, because we 
+  can have different kinds of spans, right?
 */
+
+p {
+  font-size: 14pt;
+}
+
+.supahbig {
+  font-size: 18pt;
+  font-weight: bold;
+}
