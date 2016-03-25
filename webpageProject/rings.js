@@ -6,7 +6,7 @@
  * this code. But this way is fairly straightforward.
  */
 
-(function()
+(function(){
 
   var canvasElement = document.getElementById('canvasNumberOne');
   canvasElement.addEventListener('click', drawManyCircles, false);
@@ -14,9 +14,9 @@
   function drawManyCircles(event){
     var x = event.pageX - canvasElement.offsetLeft;
     var y = event.pageY - canvasElement.offsetTop;
-  }
+  };
 
-)();
+})();
 
 /**
   * A separate function for drawing a circle
