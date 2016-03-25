@@ -96,7 +96,6 @@ span {
   border-width: 3px;     /* A nice thick line */
   border-radius: 10px;   /* I'll round the corners to make it look nice */
 }
-}
 
 /* And now I can apply that with <canvas id="canvasNumberOne">.
 
