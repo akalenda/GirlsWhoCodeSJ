@@ -9,11 +9,15 @@
 (function(){
 
   var canvasElement = document.getElementById('canvasNumberOne');
-  canvasElement.addEventListener('click', drawManyCircles, false);
+  canvasElement.addEventListener('mousedown', drawManyCircles, false);
   
   function drawManyCircles(event){
     var x = event.pageX - canvasElement.offsetLeft;
     var y = event.pageY - canvasElement.offsetTop;
+	for (var r = 1; r <= 100; r += 5) {
+		var delay = r * 2;
+		drawCircle(canvasElement, x, y, r, delay);
+	}
   };
 
 })();
@@ -21,11 +25,13 @@
 /**
   * A separate function for drawing a circle
   */
-function drawCircle(canvas){
-    var context = canvas.getContext("2d");
-    context.beginPath();
-    context.arc(200, 200, 93, Math.PI / 2, Math.PI, true);
-    mainContext.lineWidth = 1;
-    mainContext.strokeStyle = 'black';
-    mainContext.stroke();
+function drawCircle(canvas, x, y, radius, delayInMilliseconds){
+    setTimeout(function(){
+		var context = canvas.getContext("2d");
+		context.beginPath();
+		context.arc(x, y, radius, 0, 2 * Math.PI, true);
+		context.lineWidth = 1;
+		context.strokeStyle = 'black';
+		context.stroke();
+	}, delayInMilliseconds);
 }
