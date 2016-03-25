@@ -1,0 +1,102 @@
+/* CSS stands for Cascading Style Sheet.
+
+  It's for styling webpage, with colors, fonts,
+  padding, and so on.
+  
+  It's "cascading" because it starts at the top
+  of the stylesheet and works its way down, applying
+  each of the rules you've defined as is appropriate.
+  
+  For example:
+*/
+
+p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+
+/* The blue rule overwrites the red. Another example: */
+
+span {
+  font-size: 200%;
+}
+
+/* We have some text that says, "You can say whatever you like".
+  When the browser is deciding how to render it, it starts at the
+  top of our CSS rules. 
+  1. It's inside of <p> tags, so it makes the color red. 
+  2. It's inside of <p> tags, so it makes the color blue.
+  3. It's inside of <span> tags, so it changes the font size
+     to 200% of what it was: twice as big.
+*/
+
+/* Now suppose we want to have everything in our page aligned
+  in the center. It should be super straightforward, right?
+  
+  Nope!
+  
+  There is a <center> tag, which tells the browser to center
+  everything inside. But it's deprecated now -- that is, it
+  still works, but you're not supposed to use it, and for good
+  reasons.
+  
+  Instead, you're intended to write something like this:
+  <div style="text-align: center;">
+    <p style="margin: 0 auto;">Stuff I want centered</p>
+  </div>
+  
+  Why don't we create some shorthand for that? We'll create
+  a style class for each. The little dot, or period, in front
+  of the name means that it's a class instead of a tag:
+*/
+
+.centerWhatsInside {
+  text-align: center;
+}
+.centeredThing {
+  margin: 0 auto;
+}
+
+/* Now we can just write, 
+  <div class="centerWhatsInside">
+    <p class="centeredThing">Stuff I want centered</p>
+  </div>
+  
+  But why not combine the two?
+*/
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Now we can just write,
+  
+  <div class="centered">
+    <p>Stuff I want centered<p>
+  </div>
+  
+  Because everything inside of the div will inherit
+  the centered class.
+*/
+
+/* Finally, we want it to be easy to see where our canvas is
+  on the webpage. Let's give it a border. But instead of
+  giving every canvas the same border, let's just change
+  one. Instead of styling based on the tag, or on the class,
+  we'll style based on an ID, using a pound sign:
+*/
+
+#canvasNumberOne {
+  border-style: solid;   /* The default border style is 'none', so we need to change that */
+  border-color: #333333; /* I want a very specific dark grey color, so I use hexadecimal representation */
+  border-width: 3px;     /* A nice thick line */
+  border-radius: 10px;   /* I'll round the corners to make it look nice */
+}
+}
+
+/* And now I can apply that with <canvas id="canvasNumberOne">
+*/
