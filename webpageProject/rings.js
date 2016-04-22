@@ -6,21 +6,16 @@
  * this code. But this way is fairly straightforward.
  */
 
-(function(){
+var canvasElement = document.getElementById('canvasNumberOne');
+canvasElement.addEventListener('mousedown', drawManyCircles, false);
 
-  var canvasElement = document.getElementById('canvasNumberOne');
-  canvasElement.addEventListener('mousedown', drawManyCircles, false);
-  
-  function drawManyCircles(event){
-    var x = event.pageX - canvasElement.offsetLeft;
-    var y = event.pageY - canvasElement.offsetTop;
-	for (var r = 1; r <= 100; r += 5) {
-		var delay = r * 2;
-		drawCircle(canvasElement, x, y, r, delay);
-	}
-  };
-
-})();
+function drawManyCircles(event){
+var x = event.pageX - canvasElement.offsetLeft;
+var y = event.pageY - canvasElement.offsetTop;
+for (var r = 1; r <= 100; r += 5) {
+	var delay = r * 2;
+	drawCircle(canvasElement, x, y, r, delay);
+}
 
 /**
   * A separate function for drawing a circle
