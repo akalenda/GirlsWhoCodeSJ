@@ -15,7 +15,7 @@ p {
 }
 
 p {
-  color: blue;
+  color: darkblue;
 }
 
 /* The blue rule overwrites the red. Another example: */
@@ -115,4 +115,17 @@ p {
 .supahbig {
   font-size: 18pt;
   font-weight: bold;
+}
+
+/* The paragraphs run wider than I'd like when the
+	window is wide. It'd be easier to read if the
+	lines were shorter. So I'm going to make the
+	entire body more narrow. Then I'm going to set
+	the margins to auto, so that it makes the left
+	and right margins as large as possible, and thus
+	centering the body in the page:
+*/
+body {
+	width: 800px;
+	margin: auto;
 }
