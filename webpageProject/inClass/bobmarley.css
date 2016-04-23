@@ -1,6 +1,11 @@
-/* nothing */
-
 p {
 	background: black;
-	color: white;
+	color: #ffaabb;
+	padding: 10px;
+	border: red;
+	border-radius: 10px;
+	border-style: double;
+	border-width: 8px;
+	font-size: 32pt;
+	margin: 20px;
 }
