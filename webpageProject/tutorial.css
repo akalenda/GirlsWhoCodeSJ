@@ -1,13 +1,14 @@
-/* CSS stands for Cascading Style Sheet.
+/*
+      CSS stands for Cascading Style Sheet.
 
-  It's for styling webpage, with colors, fonts,
-  padding, and so on.
-  
-  It's "cascading" because it starts at the top
-  of the stylesheet and works its way down, applying
-  each of the rules you've defined as is appropriate.
-  
-  For example:
+      It's for styling webpage, with colors, fonts,
+      padding, and so on.
+
+      It's "cascading" because it starts at the top
+      of the stylesheet and works its way down, applying
+      each of the rules you've defined as is appropriate.
+
+      For example:
 */
 
 p {
@@ -95,6 +96,7 @@ span {
     border-style: solid; /* The default border style is 'none', so we need to change that */
     border-color: #333333; /* I want a very specific dark grey color, so I use hexadecimal representation */
     border-width: 3px; /* A nice thick line */
+    border: 3px solid #333333; /* Although I can combine those three properties into one, like this */
     border-radius: 10px; /* I'll round the corners to make it look nice */
 }
 
@@ -130,3 +132,72 @@ body {
     width: 800px;
     margin: auto;
 }
+
+/* Now I want to create a nicely formatted navigation bar at the top.
+    I've created a div for each button and have collected them into another div.
+
+    First I will create the navbar class. You can see I have put a
+    period in front, to indicate that this is a class.
+*/
+.navbar_horizontal {
+    float: right; /* I want the navbar to float on the right side of the screen, so that other stuff flows around it.*/
+}
+
+/* Now I was to create a rule for divs, but ONLY those divs that are directly
+    the "child" of a navbar anchor(link):
+*/
+.navbar_horizontal > a {
+    text-decoration: none; /* First I remove the underline */
+    background: #ddddff; /* First I will give it a background color, so the entire div shows up */
+    color: #220033; /* Then I change the text to a color I like */
+    font: 12pt monospace; /* And I want a different font then normal text */
+    display: inline-block; /* The div takes up the entire width of the screen! This will fix that. */
+    margin: 0; /* I remove margins so that the blocks aren't spread out. */
+    padding: 10px; /* Try different paddings to make the buttons just the right size. */
+    border-left: 1px solid #ccccff; /* I place borders, but I do each side of the button separately to get it just right */
+    border-right: 1px solid #bbbbff;
+    border-bottom: 4px solid #aaaaff;;
+    float: left; /* Finally, I want to have each of these float as far to the left as they can */
+}
+
+/* Now I want to round the corners on either end of the navbar.
+
+    For that, I use special selectors that pick out the first and last of the type, e.g. the first and last <a> tags,
+    and I round the corners on just those.
+*/
+.navbar_horizontal > a:first-of-type {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.navbar_horizontal > a:last-of-type {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Now I want to have these buttons highlight when the mouse passes over one. This makes your website feel a little
+    more responsive to the user. I will use the :hover selector, which means that it is the CSS applied on top of other
+    rules when the mouse is hovering over the element. It will keep all other rules, and change only the one I specify:
+*/
+.navbar_horizontal > a:hover {
+    background: #d5d5ff;
+}
+
+/* Now I want to make the cat pictures float to the left of the menu.
+    They both have IDs, so I could create separate rules for each, using a # to say it's by ID:
+*/
+#catOpen {
+    /* But that's silly when I want both to have the same rule. */
+}
+
+/* So I will create a class for images that I want floating left:
+*/
+img.floatLeft {
+    float: left;
+    margin: 20px;
+    border-bottom: 18px solid #eeeeff;
+    border-right: 10px solid #eeeeff;
+    background: #eeeeff;
+    border-radius: 18px;
+}
+
+
