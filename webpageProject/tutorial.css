@@ -11,17 +11,17 @@
 */
 
 p {
-  color: red;
+    color: red;
 }
 
 p {
-  color: darkblue;
+    color: darkblue;
 }
 
 /* The blue rule overwrites the red. Another example: */
 
 span {
-  font-size: 200%;
+    font-size: 200%;
 }
 
 /* We have some text that says, "You can say whatever you like".
@@ -54,10 +54,11 @@ span {
 */
 
 .centerWhatsInside {
-  text-align: center;
+    text-align: center;
 }
+
 .centeredThing {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 /* Now we can just write, 
@@ -69,8 +70,8 @@ span {
 */
 
 .centered {
-  text-align: center;
-  margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* Now we can just write,
@@ -91,10 +92,10 @@ span {
 */
 
 #canvasNumberOne {
-  border-style: solid;   /* The default border style is 'none', so we need to change that */
-  border-color: #333333; /* I want a very specific dark grey color, so I use hexadecimal representation */
-  border-width: 3px;     /* A nice thick line */
-  border-radius: 10px;   /* I'll round the corners to make it look nice */
+    border-style: solid; /* The default border style is 'none', so we need to change that */
+    border-color: #333333; /* I want a very specific dark grey color, so I use hexadecimal representation */
+    border-width: 3px; /* A nice thick line */
+    border-radius: 10px; /* I'll round the corners to make it look nice */
 }
 
 /* And now I can apply that with <canvas id="canvasNumberOne">.
@@ -109,12 +110,12 @@ span {
 */
 
 p {
-  font-size: 14pt;
+    font-size: 14pt;
 }
 
 .supahbig {
-  font-size: 18pt;
-  font-weight: bold;
+    font-size: 18pt;
+    font-weight: bold;
 }
 
 /* The paragraphs run wider than I'd like when the
@@ -126,6 +127,6 @@ p {
 	centering the body in the page:
 */
 body {
-	width: 800px;
-	margin: auto;
+    width: 800px;
+    margin: auto;
 }
