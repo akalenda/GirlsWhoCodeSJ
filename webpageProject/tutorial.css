@@ -232,6 +232,10 @@ img.floatLeft {
     border-bottom-right-radius: 8px;
 }
 
+.navbar_vertical > a:hover {
+    background: #d5d5ff;
+}
+
 /* This isn't quite perfect. If you shrink the window, the main body of the webpage can go behind the vertical navbar
     and be covered up. But its a start.
 
