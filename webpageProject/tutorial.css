@@ -128,8 +128,10 @@ p {
 	and right margins as large as possible, and thus
 	centering the body in the page:
 */
-body {
+.centered {
     width: 800px;
+    text-align: center;
+    margin: 0 auto;
     margin: auto;
 }
 
@@ -154,7 +156,7 @@ body {
     display: inline-block; /* The div takes up the entire width of the screen! This will fix that. */
     margin: 0; /* I remove margins so that the blocks aren't spread out. */
     padding: 10px; /* Try different paddings to make the buttons just the right size. */
-    border-left: 1px solid #ccccff; /* I place borders, but I do each side of the button separately to get it just right */
+    border-left: 1px solid #ccccff; /* I place borders, but separately for each side */
     border-right: 1px solid #bbbbff;
     border-bottom: 4px solid #aaaaff;;
     float: left; /* Finally, I want to have each of these float as far to the left as they can */
@@ -200,4 +202,39 @@ img.floatLeft {
     border-radius: 18px;
 }
 
+/* Now I want to have a vertical navbar floating off to the side, so I will create some similar rules for that.
+    I want it to have a fixed position on the screen at all times, so I will set that to be the case instead of the
+    default (which is relative to the element's parent).
+*/
+.navbar_vertical {
+    position: fixed;
+}
 
+.navbar_vertical > a {
+    display: block;
+    text-decoration: none; /* First I remove the underline */
+    background: #ddddff; /* First I will give it a background color, so the entire div shows up */
+    color: #220033; /* Then I change the text to a color I like */
+    font: 12pt monospace; /* And I want a different font then normal text */
+    margin: 0; /* I remove margins so that the blocks aren't spread out. */
+    padding: 10px; /* Try different paddings to make the buttons just the right size. */
+    border-top: 1px solid #ccccff; /* I place borders, but separately for each side */
+    border-bottom: 1px solid #bbbbff;
+}
+
+.navbar_vertical > a:first-of-type {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.navbar_vertical > a:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* This isn't quite perfect. If you shrink the window, the main body of the webpage can go behind the vertical navbar
+    and be covered up. But its a start.
+
+    You'll also notice that a lot of the styling on our two navbars is the same. We can clean up our CSS by putting
+    the parts that the two classes have in common in a new class, so that we don't repeat ourselves. Give it a try!
+*/
