@@ -1,0 +1,12 @@
+div {
+}
+
+.nav {
+    display: inline-block;
+    background-color: grey;
+    padding: 20px;
+    margin: 8px;
+    border: blue;
+    border-width: 5px;
+    border-style: dotted;
+}

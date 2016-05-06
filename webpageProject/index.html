@@ -8,8 +8,11 @@
 <body>
  <div class="centered">
   <h1>Welcome, traveler</h2>
-  <img src="grumpyCatKnight.jpg">
+  <img src="grumpyCatKnight.jpg" id="catOpen">
+  <img src="grumpyCatKnight_eyesClosed.jpg" id="catClosed" style="display: none"
+  >
   <p>I am <span class="supahbig">Sir Grumpycat</span>, and I am <span class="supahbig">lord</span> of this webpage.</p>
+  <p>Try clicking on the canvas square just below. Also, try clicking on the cat image above. Want to know how it's done? Right-click to inspect the web page, then look at the sources. It's a combination of HTML, and the Javascript found in catBlink.js!</p>
   <canvas id="canvasNumberOne" width=255 height=255></canvas>
   <p><span class="supahbig">Harken</span>, for there are many other things we could put into a webpage, but this is a fine beginning to our journey.</p>
   <p><span class="supahbig">Tired of editing changes online?</span> Want to save your webpage onto your computer and work there, and then upload changes?
@@ -22,6 +25,7 @@
   <p><span class="supahbig">Finally:</span> <a href="https://git-scm.com/downloads/guis">Other GUI options.</a> If you ever end up using Git with something besides Github, these can be nice. Perhaps you'd like to <a href="https://about.gitlab.com/">create your very own Git server</a>?</p>
   </ul>
  </div>
+ <script src="catBlink.js"></script>
  <script src="rings.js"></script>
 </body>
 
